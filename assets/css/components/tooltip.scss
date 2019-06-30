@@ -1,0 +1,141 @@
+$paddingTooltip: 5px;
+
+.Tooltip {
+  position: relative;
+
+  &-content {
+    visibility: hidden;
+    opacity: 0;
+    transition: .1s opacity;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: $paddingTooltip * 2 0;
+    min-width: 120px;
+    color: white;
+    background-color: black;
+    padding: $paddingTooltip;
+
+    &::before {
+      content: '';
+      top: 100%;
+      left: 50%;
+      transform: rotate(45deg);
+      margin: -$paddingTooltip;
+      padding: inherit;
+      display: block;
+      position: absolute;
+      background-color: inherit;
+    }
+  }
+
+  &:hover {
+    .Tooltip-content {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &--positionBottom {
+    .Tooltip-content {
+      bottom: initial;
+      top: 100%;
+
+      &::before {
+        top: initial;
+        bottom: 100%;
+      }
+    }
+  }
+
+  &--positionLeft {
+    .Tooltip-content {
+      bottom: 50%;
+      transform: translateY(50%);
+      right: 100%;
+      left: initial;
+      margin: 0 $paddingTooltip * 2;
+
+      &::before {
+        top: 50%;
+        left: 100%;
+      }
+    }
+  }
+
+  &--positionRight {
+    .Tooltip-content {
+      bottom: 50%;
+      transform: translateY(50%);
+      right: initial;
+      left: 100%;
+      margin: 0 $paddingTooltip * 2;
+
+      &::before {
+        top: 50%;
+        right: 100%;
+        left: initial;
+      }
+    }
+  }
+
+  &--alignLeft {
+    .Tooltip-content {
+      left: initial;
+      right: 50%;
+      transform: initial;
+      margin-right: -3 * $paddingTooltip;
+
+      &::before {
+        left: initial;
+        right: 0;
+        margin: -$paddingTooltip 2 * $paddingTooltip;
+      }
+    }
+  }
+
+  &--alignRight {
+    .Tooltip-content {
+      left: 50%;
+      transform: initial;
+      margin-left: -3 * $paddingTooltip;
+
+      &::before {
+        left: 0;
+        margin: -$paddingTooltip 2 * $paddingTooltip;
+      }
+    }
+  }
+
+  &--alignBottom {
+    .Tooltip-content {
+      bottom: initial;
+      top: 50%;
+      transform: initial;
+      margin-top: -3 * $paddingTooltip;
+
+      &::before {
+        top: 0;
+        margin: 2 * $paddingTooltip 0-$paddingTooltip;
+      }
+    }
+  }
+
+  &--alignTop {
+    .Tooltip-content {
+      bottom: 50%;
+      transform: initial;
+      margin-bottom: -3 * $paddingTooltip;
+
+      &::before {
+        top: initial;
+        bottom: 0;
+        margin: 2 * $paddingTooltip 0-$paddingTooltip;
+      }
+    }
+  }
+}
+
+
+

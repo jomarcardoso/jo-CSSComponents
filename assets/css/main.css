@@ -1,0 +1,211 @@
+@import url(../../../node_modules/normalize.css/normalize.css);
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+:focus {
+  outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol,
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/*
+ * padding e border ficam para serem sobrescritos pelo estilo
+ */
+fieldset {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: normal;
+  text-align: left;
+}
+
+dd {
+  margin-left: 0;
+}
+
+textarea {
+  vertical-align: top;
+  resize: vertical;
+}
+
+.Tooltip {
+  position: relative;
+}
+
+.Tooltip-content {
+  visibility: hidden;
+  opacity: 0;
+  transition: .1s opacity;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 10px 0;
+  min-width: 120px;
+  color: white;
+  background-color: black;
+  padding: 5px;
+}
+
+.Tooltip-content::before {
+  content: '';
+  top: 100%;
+  left: 50%;
+  transform: rotate(45deg);
+  margin: -5px;
+  padding: inherit;
+  display: block;
+  position: absolute;
+  background-color: inherit;
+}
+
+.Tooltip:hover .Tooltip-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Tooltip--positionBottom .Tooltip-content {
+  bottom: initial;
+  top: 100%;
+}
+
+.Tooltip--positionBottom .Tooltip-content::before {
+  top: initial;
+  bottom: 100%;
+}
+
+.Tooltip--positionLeft .Tooltip-content {
+  bottom: 50%;
+  transform: translateY(50%);
+  right: 100%;
+  left: initial;
+  margin: 0 10px;
+}
+
+.Tooltip--positionLeft .Tooltip-content::before {
+  top: 50%;
+  left: 100%;
+}
+
+.Tooltip--positionRight .Tooltip-content {
+  bottom: 50%;
+  transform: translateY(50%);
+  right: initial;
+  left: 100%;
+  margin: 0 10px;
+}
+
+.Tooltip--positionRight .Tooltip-content::before {
+  top: 50%;
+  right: 100%;
+  left: initial;
+}
+
+.Tooltip--alignLeft .Tooltip-content {
+  left: initial;
+  right: 50%;
+  transform: initial;
+  margin-right: -15px;
+}
+
+.Tooltip--alignLeft .Tooltip-content::before {
+  left: initial;
+  right: 0;
+  margin: -5px 10px;
+}
+
+.Tooltip--alignRight .Tooltip-content {
+  left: 50%;
+  transform: initial;
+  margin-left: -15px;
+}
+
+.Tooltip--alignRight .Tooltip-content::before {
+  left: 0;
+  margin: -5px 10px;
+}
+
+.Tooltip--alignBottom .Tooltip-content {
+  bottom: initial;
+  top: 50%;
+  transform: initial;
+  margin-top: -15px;
+}
+
+.Tooltip--alignBottom .Tooltip-content::before {
+  top: 0;
+  margin: 10px -5px;
+}
+
+.Tooltip--alignTop .Tooltip-content {
+  bottom: 50%;
+  transform: initial;
+  margin-bottom: -15px;
+}
+
+.Tooltip--alignTop .Tooltip-content::before {
+  top: initial;
+  bottom: 0;
+  margin: 10px -5px;
+}
+
+.Carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.Carousel-slide {
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
