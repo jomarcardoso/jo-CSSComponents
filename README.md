@@ -9,7 +9,7 @@
 
 ## Scripts
 
-- *start*: build and watch the .scss to .css
+- **start**: build and watch the .scss to .css
 
 ## Releases
 
