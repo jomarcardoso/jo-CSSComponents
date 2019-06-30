@@ -1,10 +1,11 @@
-# Parallax
+# CSS Components
 
-> [jo-cssfeatures.surge.sh](http://jo-cssfeatures.surge.sh/)
+> [jo-csscomponents.surge.sh](http://jo-csscomponents.surge.sh/)
 
 ## Core components
 
-- [tooltip](/assets/css/features/tooltip.css)
+- [tooltip](/assets/css/components/tooltip.css)
+- [carousel](/assets/css/components/carousel.css)
 
 ## Releases
 
